@@ -8,79 +8,44 @@ import android.view.Menu;
 
 public class ViewerActivity extends PdfViewerActivity {
 	
-	public static final String DATABASE_NAME = "rssreader";
-
-	@Override
-	public void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		//setContentView(R.layout.activity_viewer);
-		LayoutInflater ltInflater = getLayoutInflater();
-	}
-
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		super.onCreateOptionsMenu(menu);
-		return true;
-	}
-
-	@Override
-	public int getNextPageImageResource() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
-	@Override
-	public int getPdfPageNumberEditField() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
-	@Override
-	public int getPdfPageNumberResource() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
-	@Override
-	public int getPdfPasswordEditField() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
-	@Override
-	public int getPdfPasswordExitButton() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
-	@Override
-	public int getPdfPasswordLayoutResource() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
-	@Override
-	public int getPdfPasswordOkButton() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
-	@Override
 	public int getPreviousPageImageResource() {
-		// TODO Auto-generated method stub
-		return 0;
+		return R.drawable.left_arrow;
 	}
 
-	@Override
+	public int getNextPageImageResource() {
+		return R.drawable.right_arrow;
+	}
+
 	public int getZoomInImageResource() {
-		// TODO Auto-generated method stub
-		return 0;
+		return R.drawable.zoom_in;
 	}
 
-	@Override
 	public int getZoomOutImageResource() {
-		// TODO Auto-generated method stub
-		return 0;
+		return R.drawable.zoom_out;
+	}
+
+	public int getPdfPasswordLayoutResource() {
+		return R.layout.pdf_file_password;
+	}
+
+	public int getPdfPageNumberResource() {
+		return R.layout.dialog_pagenumber;
+	}
+
+	public int getPdfPasswordEditField() {
+		return R.id.etPassword;
+	}
+
+	public int getPdfPasswordOkButton() {
+		return R.id.btOK;
+	}
+
+	public int getPdfPasswordExitButton() {
+		return R.id.btExit;
+	}
+
+	public int getPdfPageNumberEditField() {
+		return R.id.pagenum_edit;
 	}
 
 }
